@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9b6e6b4fdd7421f4587628736211b438
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 273014
+  packageName: Blendpoly Ultimate Characters - Low Poly Assets
+  packageVersion: 1.0
+  assetPath: Assets/Blendpoly Ultimate Characters - Low Poly Assets/Scripts/CustomizationButtonListener.cs
+  uploadId: 668148

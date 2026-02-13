@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e09ffc863956cf941a4f3f48ad95c0f5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 273014
+  packageName: Blendpoly Ultimate Characters - Low Poly Assets
+  packageVersion: 1.0
+  assetPath: Assets/Blendpoly Ultimate Characters - Low Poly Assets/Scripts/ToggleScript.cs
+  uploadId: 668148

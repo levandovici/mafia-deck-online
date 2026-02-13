@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4f9ab50fbe9a71c46a96783cfd3b0e6f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 273014
+  packageName: Blendpoly Ultimate Characters - Low Poly Assets
+  packageVersion: 1.0
+  assetPath: Assets/Blendpoly Ultimate Characters - Low Poly Assets/Scripts/CharacterCustomization.cs
+  uploadId: 668148
