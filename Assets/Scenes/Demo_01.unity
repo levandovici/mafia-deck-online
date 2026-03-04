@@ -8148,6 +8148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table-12
       objectReference: {fileID: 0}
+    - target: {fileID: 5572787438374457199, guid: 9051fd57486d774489a196affac9563c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6454494515279954503, guid: 9051fd57486d774489a196affac9563c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
