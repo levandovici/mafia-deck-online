@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4794827237891114}
   - component: {fileID: 2276166940619338556}
+  - component: {fileID: 4131274658638881368}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -55,6 +56,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4131274658638881368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007844413100424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
+  _animator: {fileID: 2276166940619338556}
+  _characterPivot: {fileID: 1825751780408884163}
+  _chair:
+    state: 2
+    character:
+      type: -1
+      color: -1
+      clothes: -1
+  _character: {fileID: 0}
 --- !u!1 &875186613995439693
 GameObject:
   m_ObjectHideFlags: 0
