@@ -28,6 +28,8 @@ public class TableController : MonoBehaviour
 
     public void Setup(TableData table)
     {
+        ClearTable();
+
         string path;
 
         switch(table.type)
@@ -55,5 +57,19 @@ public class TableController : MonoBehaviour
         Table prefab = Resources.Load<Table>(path);
 
         Table = Instantiate(prefab, Vector3.zero, Quaternion.identity, _tablePivot);
+
+        Table.Setup(table);
+    }
+
+
+
+    private void ClearTable()
+    {
+        if(Table != null)
+        {
+            Destroy(Table.gameObject);
+
+            Table = null;
+        }
     }
 }

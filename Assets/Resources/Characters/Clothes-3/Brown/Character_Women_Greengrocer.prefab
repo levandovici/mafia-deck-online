@@ -77,13 +77,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 318710844232416489, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a6fd49f38ad34a44499dc5d7fa4e0173, type: 2}
     - target: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
       propertyPath: m_Name
       value: Character_Women_Greengrocer
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1b4fe331e6ed2674bae9e749b73eb2fe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -1254437519927600591, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
@@ -120,5 +124,31 @@ PrefabInstance:
     - {fileID: 3090579652891636, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     - {fileID: 2700023921410276053, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8053377539857674227}
   m_SourcePrefab: {fileID: 100100000, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+--- !u!1 &141183399101312552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 951662894616974201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8053377539857674227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141183399101312552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c52a89ce0989e4ba9ecc7cea2159e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  _animator: {fileID: 6655873803246120680}
+--- !u!95 &6655873803246120680 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 951662894616974201}
+  m_PrefabAsset: {fileID: 0}

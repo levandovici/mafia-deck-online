@@ -81,9 +81,13 @@ PrefabInstance:
       value: Character_Male_Engineer
       objectReference: {fileID: 0}
     - target: {fileID: 5420990296907581570, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a09e61d54e2827d499f08bbd7ec63449, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 53b824b36ebeafb48815ca92f54ada86, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -4486184950080398082, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
@@ -120,5 +124,31 @@ PrefabInstance:
     - {fileID: -7380257616983155970, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     - {fileID: 953417778053378045, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -558747968485750000}
   m_SourcePrefab: {fileID: 100100000, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+--- !u!95 &2560034537969163002 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 8281420909523412843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9091903025105050170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 8281420909523412843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-558747968485750000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091903025105050170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c52a89ce0989e4ba9ecc7cea2159e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  _animator: {fileID: 2560034537969163002}

@@ -40,4 +40,11 @@ public class Character : MonoBehaviour
     {
         _animator.SetTrigger("StandUp");
     }
+
+
+
+    private void Reset()
+    {
+        _animator = GetComponent<Animator>();
+    }
 }

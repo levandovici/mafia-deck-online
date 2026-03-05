@@ -49,7 +49,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3795952653617130933, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a6fd49f38ad34a44499dc5d7fa4e0173, type: 2}
     - target: {fileID: -3308771003873049259, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Women_Coat
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1b4fe331e6ed2674bae9e749b73eb2fe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2168494725251278216, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
@@ -124,5 +128,31 @@ PrefabInstance:
     - {fileID: -1254437519927600591, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     - {fileID: -1864300436524250233, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3583858371118136260}
   m_SourcePrefab: {fileID: 100100000, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+--- !u!1 &2015115478289328799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 1672604611344504782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3583858371118136260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015115478289328799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c52a89ce0989e4ba9ecc7cea2159e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  _animator: {fileID: 5070169867900824159}
+--- !u!95 &5070169867900824159 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 1672604611344504782}
+  m_PrefabAsset: {fileID: 0}

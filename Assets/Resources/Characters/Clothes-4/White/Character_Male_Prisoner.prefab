@@ -81,9 +81,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3442538132261465961, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bbc36cb09cf52bc43902bb17e1b36c6e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 53b824b36ebeafb48815ca92f54ada86, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8065411648542399265, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
@@ -120,5 +124,31 @@ PrefabInstance:
     - {fileID: 2274993026852454613, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     - {fileID: -7583683268961316873, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4256176580291435228}
   m_SourcePrefab: {fileID: 100100000, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+--- !u!95 &3091457012378080621 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 8902941844190472444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8596513786563794349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 89eb8f0a74fea8a4cb454cb60812674b, type: 3}
+  m_PrefabInstance: {fileID: 8902941844190472444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4256176580291435228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596513786563794349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c52a89ce0989e4ba9ecc7cea2159e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  _animator: {fileID: 3091457012378080621}
