@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.Utilities;
 
 public class Chair : MonoBehaviour
 {
@@ -45,9 +46,11 @@ public class Chair : MonoBehaviour
 
     public void Setup(ChairData chair)
     {
+        ClearCharacter();
+
         CharacterData character = chair.character;
         
-        string json = Resources.Load<TextAsset>("Characters/characters.json").text;
+        string json = Resources.Load<TextAsset>("Characters/characters").text;
 
         CharacterPrefabs characters = JsonUtility.FromJson<CharacterPrefabs>(json);
 
@@ -55,7 +58,7 @@ public class Chair : MonoBehaviour
 
         Character prefab = Resources.Load<Character>(path);
 
-        Character obj = Instantiate(prefab, Vector3.zero, Quaternion.identity, _characterPivot);
+        Character obj = Instantiate(prefab, _characterPivot, false);
 
         obj.Setup(character);
 
@@ -66,14 +69,20 @@ public class Chair : MonoBehaviour
 
 
 
-    public void PushIn()
+    public void SitDown()
     {
         _animator.SetTrigger("PushIn");
+
+        if (Character != null)
+            Character.SitDown();
     }
 
-    public void PullOut()
+    public void StandUp()
     {
         _animator.SetTrigger("PullOut");
+
+        if (Character != null)
+            Character.StandUp();
     }
 
 
@@ -81,5 +90,19 @@ public class Chair : MonoBehaviour
     public void Release()
     {
         Destroy(Character.gameObject);
+
+        Character = null;
+    }
+
+
+
+    private void ClearCharacter()
+    {
+        if(Character != null)
+        {
+            Destroy(Character.gameObject);
+
+            Character = null;
+        }
     }
 }

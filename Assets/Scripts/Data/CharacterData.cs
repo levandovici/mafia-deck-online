@@ -6,9 +6,9 @@ public class CharacterData
 {
     public int type;
 
-    public int color;
-
     public int clothes;
+
+    public int color;
 
 
 
@@ -16,7 +16,7 @@ public class CharacterData
     {
         get
         {
-            return type != -1 && color != -1 && clothes != -1;
+            return type != -1 && clothes != -1 && color != -1;
         }
     }
 
@@ -27,12 +27,12 @@ public class CharacterData
 
     }
 
-    public CharacterData(int type, int color, int clothes)
+    public CharacterData(int type, int clothes, int color)
     {
         this.type = type;
 
-        this.color = color;
-        
         this.clothes = clothes;
+        
+        this.color = color;
     }
 }

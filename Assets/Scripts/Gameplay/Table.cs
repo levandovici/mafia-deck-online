@@ -33,4 +33,24 @@ public class Table : MonoBehaviour
             _chairs[i].Setup(table.chairs[i]);
         }
     }
+
+
+
+    [ContextMenu("Sit Down All")]
+    public void SitDownAll()
+    {
+        for(int i = 0; i < _chairs.Length; i++)
+        {
+            _chairs[i].SitDown();
+        }
+    }
+
+    [ContextMenu("Stand Up All")]
+    public void StandUpAll()
+    {
+        for (int i = 0; i < _chairs.Length; i++)
+        {
+            _chairs[i].StandUp();
+        }
+    }
 }
