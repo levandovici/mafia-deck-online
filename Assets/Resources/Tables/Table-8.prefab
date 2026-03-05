@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8542571621031473911}
+  - component: {fileID: 2438053377644993421}
   m_Layer: 0
   m_Name: Table-8
   m_TagString: Untagged
@@ -29,26 +30,47 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4942332693484928742}
-  - {fileID: 35526651996346442}
+  - {fileID: 3442564223689590566}
+  - {fileID: 2677193492252203563}
   - {fileID: 9114568366153693122}
+  - {fileID: 35526651996346442}
+  - {fileID: 6783563693528797383}
+  - {fileID: 4989358571325998729}
+  - {fileID: 2090342343432854142}
+  - {fileID: 3951735892525268428}
+  - {fileID: 4942332693484928742}
   - {fileID: 2172495350200076441}
   - {fileID: 3284659963725620685}
   - {fileID: 365299254524781560}
   - {fileID: 5323330216897365175}
   - {fileID: 9214080812548009546}
-  - {fileID: 3951735892525268428}
-  - {fileID: 3442564223689590566}
   - {fileID: 3901936522744532486}
-  - {fileID: 4989358571325998729}
-  - {fileID: 6783563693528797383}
-  - {fileID: 2090342343432854142}
   - {fileID: 572205901689546150}
-  - {fileID: 2677193492252203563}
   - {fileID: 3714423680596539822}
   - {fileID: 8777796033239366148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2438053377644993421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230950610755347617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae758f8fee2df04593362b3d767a1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Table
+  _chairs:
+  - {fileID: 1621935074335586644}
+  - {fileID: 2045612781869622361}
+  - {fileID: 5132211401697397168}
+  - {fileID: 4123612781485581880}
+  - {fileID: 7449019249172754101}
+  - {fileID: 8969472368365254907}
+  - {fileID: 2613873382449325068}
+  - {fileID: 1122335755073045438}
 --- !u!1001 &31313627135542368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,7 +81,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (3)
+      value: Chair-4
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -115,6 +137,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
   m_PrefabInstance: {fileID: 31313627135542368}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4123612781485581880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 31313627135542368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!1001 &368910830923264512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248,6 +281,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8542571621031473911}
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+      propertyPath: m_Name
+      value: Chair-7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -301,6 +338,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
   m_PrefabInstance: {fileID: 2095136551985202772}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2613873382449325068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 2095136551985202772}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!1001 &2177001305479871621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,7 +409,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (5)
+      value: Chair-2
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -412,6 +460,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+--- !u!114 &2045612781869622361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 2681407135654872577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!4 &2677193492252203563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
@@ -477,7 +536,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (6)
+      value: Chair-1
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -524,6 +583,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+--- !u!114 &1621935074335586644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 3447357298437692172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!4 &3442564223689590566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
@@ -647,7 +717,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (2)
+      value: Chair-8
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -690,6 +760,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+--- !u!114 &1122335755073045438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 3946958696875500006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!4 &3951735892525268428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
@@ -759,7 +840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (1)
+      value: Chair-6
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -815,6 +896,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
   m_PrefabInstance: {fileID: 4984583124121410211}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8969472368365254907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 4984583124121410211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!1001 &5327594618109095087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -875,7 +967,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (7)
+      value: Chair-5
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -935,6 +1027,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
   m_PrefabInstance: {fileID: 6788340688061943021}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7449019249172754101 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 6788340688061943021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!1001 &8773225430696201020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,7 +1102,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Chair_03 (4)
+      value: Chair-3
       objectReference: {fileID: 0}
     - target: {fileID: 1007844413100424, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
       propertyPath: m_IsActive
@@ -1050,6 +1153,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+--- !u!114 &5132211401697397168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4131274658638881368, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}
+  m_PrefabInstance: {fileID: 9109791926954781672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb00c5554c98f545b3fcd668034fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chair
 --- !u!4 &9114568366153693122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4794827237891114, guid: 94d7ddf5941e9b445abf83a8dc3a1106, type: 3}

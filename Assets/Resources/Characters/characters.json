@@ -1,0 +1,2486 @@
+{
+    "characters": [
+        {
+            "name": "Character_BusinessMan_Shirt",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_BusinessMan_Shirt"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_BusinessMan_Shirt"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_BusinessMan_Shirt"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_BusinessMan_Shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_BusinessMan_Shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_BusinessMan_Suit",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_BusinessMan_Suit"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_BusinessMan_Suit"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_BusinessMan_Suit"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_BusinessMan_Suit"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_BusinessMan_Suit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_BusinessWoman",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_BusinessWoman"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_BusinessWoman"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_BusinessWoman"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_BusinessWoman"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_BusinessWoman"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_FactoryMan",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_FactoryMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_FactoryMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_FactoryMan"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_FactoryMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_FactoryMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_FactoryMan"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_FactoryMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_FactoryMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_FactoryMan"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_FactoryMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_FactoryMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_FactoryMan"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Beach",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Beach"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Beach"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Beach"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Beach"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Casual1",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Casual1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Casual1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Casual1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Casual1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Casual2",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Casual2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Casual2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Casual2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Casual2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Constructor",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Constructor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Constructor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Constructor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Constructor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Constructor"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Doctor",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Doctor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Doctor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Doctor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Doctor"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Engineer",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Engineer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Engineer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Engineer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Engineer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Engineer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_FireMan",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_FireMan"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_FireMan"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_FireMan"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_FireMan"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_FireMan"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Greengrocer",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Greengrocer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Greengrocer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Greengrocer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Greengrocer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Hoodie",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Hoodie"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Hoodie"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Hoodie"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Hoodie"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Hoodie"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Jacket",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Jacket"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Jacket"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Jacket"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Jacket"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Jacket"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Police",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Police"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Police"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Police"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Police"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Prisoner",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Prisoner"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Prisoner"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Prisoner"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Prisoner"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_T_shirt",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_T_shirt"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_T_shirt"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_T_shirt"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_T_shirt"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_T_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Teacher",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Teacher"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Teacher"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Teacher"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Teacher"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Waiter1",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Waiter1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Waiter1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Waiter1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Waiter1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Male_Waiter2",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Male_Waiter2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Male_Waiter2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Male_Waiter2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Male_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Male_Waiter2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Man_Fitness",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Man_Fitness"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Man_Fitness"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Man_Fitness"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Man_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Man_Fitness"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Woman_Casual1",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Woman_Casual1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Woman_Casual1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Woman_Casual1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Woman_Casual1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Woman_Casual1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Woman_Casual2",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Woman_Casual2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Woman_Casual2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Woman_Casual2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Woman_Casual2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Woman_Casual2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Woman_Casual3",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Woman_Casual3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Woman_Casual3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Woman_Casual3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Woman_Casual3"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Woman_Casual3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Woman_Waiter1",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Woman_Waiter1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Woman_Waiter1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Woman_Waiter1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Woman_Waiter1"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Woman_Waiter1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Woman_Waiter2",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Woman_Waiter2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Woman_Waiter2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Woman_Waiter2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Woman_Waiter2"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Woman_Waiter2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Beach",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Beach"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Beach"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Beach"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Beach"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Beach"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Beach"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Coat",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Coat"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Coat"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Coat"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Coat"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Coat"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Coat"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Coat"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Coat"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Coat"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Coat"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Coat"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Coat"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Doctor",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Doctor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Doctor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Doctor"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Doctor"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Doctor"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Fitness",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Fitness"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Fitness"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Fitness"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Fitness"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Fitness"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Greengrocer",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Greengrocer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Greengrocer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Greengrocer"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Greengrocer"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Greengrocer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Police",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Police"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Police"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Police"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Police"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Police"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Police"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Prisoner",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Prisoner"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Prisoner"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Prisoner"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Prisoner"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Prisoner"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Character_Women_Teacher",
+            "clothes": [
+                {
+                    "type": "Clothes-1",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-1/Black/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-1/Brown/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-1/White/Character_Women_Teacher"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-2",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-2/Black/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-2/Brown/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-2/White/Character_Women_Teacher"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-3",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-3/Black/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-3/Brown/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-3/White/Character_Women_Teacher"
+                        }
+                    ]
+                },
+                {
+                    "type": "Clothes-4",
+                    "colors": [
+                        {
+                            "color": "Black",
+                            "path": "Characters/Clothes-4/Black/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "Brown",
+                            "path": "Characters/Clothes-4/Brown/Character_Women_Teacher"
+                        },
+                        {
+                            "color": "White",
+                            "path": "Characters/Clothes-4/White/Character_Women_Teacher"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
