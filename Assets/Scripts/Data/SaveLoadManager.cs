@@ -1,31 +1,12 @@
 using UnityEngine;
 
-public class SaveLoadManager : MonoBehaviour
+public static class SaveLoadManager
 {
-    private static SaveLoadManager _Instance = null;
+    private static int _sceneIndex = 1;
 
 
 
-    public static SaveLoadManager Instance
-    {
-        get
-        {
-            return _Instance;
-        }
-
-        private set
-        {
-            _Instance = value;
-        }
-    }
-
-
-
-    private int _sceneIndex = 1;
-
-
-
-    public int SceneIndex
+    public static int SceneIndex
     {
         get
         {
@@ -35,30 +16,6 @@ public class SaveLoadManager : MonoBehaviour
         set
         {
             _sceneIndex = value;
-        }
-    }
-
-
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
-
-            Instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if(Instance == this)
-        {
-            Instance = null;
         }
     }
 }

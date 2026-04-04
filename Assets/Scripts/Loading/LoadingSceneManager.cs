@@ -9,7 +9,7 @@ public class LoadingSceneManager : MonoBehaviour
 
 
 
-    private void Start()
+    private void Awake()
     {
         Load();
     }
@@ -20,7 +20,7 @@ public class LoadingSceneManager : MonoBehaviour
     {
         _uiManger.Setup(ELoadingPanel.Loading);
 
-        StartCoroutine(Loading(SaveLoadManager.Instance.SceneIndex));
+        StartCoroutine(Loading(SaveLoadManager.SceneIndex));
     }
 
 
