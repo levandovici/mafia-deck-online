@@ -2,6 +2,16 @@ using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
+    public bool Opened
+    {
+        get
+        {
+            return gameObject.activeSelf;
+        }
+    }
+
+
+
     public void Open()
     {
         SetActive(true);

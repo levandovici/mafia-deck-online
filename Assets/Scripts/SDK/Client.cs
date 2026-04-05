@@ -1,6 +1,8 @@
 using UnityEngine;
 using michitai;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System;
 
 public static class Client
 {
@@ -42,6 +44,32 @@ public static class Client
             return new AuthResponse(response.success, player ?? new PlayerData());
         }
         else return new AuthResponse(false);
+    }
+
+
+    public static async Task<List<MatchmakingLobby>> MatchmakingsList()
+    {
+        MatchmakingListResponse response = await Game.GetMatchmakingLobbiesAsync();
+
+        if (response.success)
+        {
+            return response.lobbies;
+        }
+        else return null;
+    }
+
+    public static async Task CreateMatchmaking(string playerToken)
+    {
+        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<RulesData>(playerToken, 6, true);
+
+        if(response.success)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 }
 
@@ -87,4 +115,10 @@ public class AuthResponse
 
         Player = player;
     }
+}
+
+[Serializable]
+public class RulesData
+{
+
 }

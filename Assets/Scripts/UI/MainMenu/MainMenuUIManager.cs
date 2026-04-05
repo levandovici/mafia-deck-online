@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MainMenuUIManager : MonoBehaviour
@@ -16,6 +17,10 @@ public class MainMenuUIManager : MonoBehaviour
 
     [SerializeField]
     private EMainMenuPanel _current = EMainMenuPanel.None;
+
+
+
+    public event Action<EMainMenuPanel> OnPanelChanged;
 
 
 
@@ -83,6 +88,8 @@ public class MainMenuUIManager : MonoBehaviour
         Open(panel);
 
         Current = panel;
+
+        OnPanelChanged?.Invoke(panel);
     }
 
 
