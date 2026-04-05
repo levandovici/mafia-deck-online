@@ -5,4 +5,6 @@ using UnityEngine;
 public class PlayerData
 {
     public int wins = 0;
+
+    public CharacterCustomData character = new CharacterCustomData();
 }

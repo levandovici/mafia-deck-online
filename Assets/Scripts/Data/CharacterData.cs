@@ -4,11 +4,7 @@ using UnityEngine;
 [Serializable]
 public class CharacterData
 {
-    public int type;
-
-    public int clothes;
-
-    public int color;
+    public CharacterCustomData custom;
 
 
 
@@ -16,23 +12,19 @@ public class CharacterData
     {
         get
         {
-            return type != -1 && clothes != -1 && color != -1;
+            return custom.IsValid;
         }
     }
 
 
 
-    public CharacterData() : this(-1, -1, -1)
+    public CharacterData() : this(new CharacterCustomData())
     {
 
     }
 
-    public CharacterData(int type, int clothes, int color)
+    public CharacterData(CharacterCustomData custom)
     {
-        this.type = type;
-
-        this.clothes = clothes;
-        
-        this.color = color;
+        this.custom = custom;
     }
 }

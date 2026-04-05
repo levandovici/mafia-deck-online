@@ -60,8 +60,8 @@ public class GameplaySceneManager : MonoBehaviour
 
         for (int i = 0; i < chairs.Length; i++)
         {
-            CharacterData character = new CharacterData(Random.Range(0, typesCount),
-                Random.Range(0, clothesCount), Random.Range(0, colorCount));
+            CharacterData character = new CharacterData(new CharacterCustomData(Random.Range(0, typesCount),
+                Random.Range(0, clothesCount), Random.Range(0, colorCount)));
 
             chairs[i] = new ChairData(EChairState.PulledOut, character);
         }

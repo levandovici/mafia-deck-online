@@ -1,33 +1,14 @@
 using UnityEngine;
-using UnityEngine.InputSystem.Utilities;
 
-public class Chair : MonoBehaviour
+public class Armchair : MonoBehaviour
 {
     [SerializeField]
-    private Animator _animator;
-
-    [SerializeField]
     private Transform _characterPivot;
-
-    private ChairData _chair;
 
     [SerializeField]
     private Character _character = null;
 
 
-
-    public ChairData Data
-    {
-        get
-        {
-            return _chair;
-        }
-
-        private set
-        {
-            _chair = value;
-        }
-    }
 
     public Character Character
     {
@@ -44,25 +25,19 @@ public class Chair : MonoBehaviour
 
 
 
-    public void Setup(ChairData chair)
+    public void Setup(CharacterCustomData custom)
     {
         ClearCharacter();
 
-        CharacterData character = chair.character;
-        
         string json = Resources.Load<TextAsset>("Characters/characters").text;
 
         CharacterPrefabs characters = JsonUtility.FromJson<CharacterPrefabs>(json);
 
-        string path = characters.characters[character.custom.type].clothes[character.custom.clothes].colors[character.custom.color].path;
+        string path = characters.characters[custom.type].clothes[custom.clothes].colors[custom.color].path;
 
         Character prefab = Resources.Load<Character>(path);
 
         Character obj = Instantiate(prefab, _characterPivot, false);
-
-        obj.Setup(character);
-
-        Data = chair;
 
         Character = obj;
     }
@@ -71,16 +46,12 @@ public class Chair : MonoBehaviour
 
     public void SitDown()
     {
-        _animator.SetTrigger("PushIn");
-
         if (Character != null)
             Character.SitDown();
     }
 
     public void StandUp()
     {
-        _animator.SetTrigger("PullOut");
-
         if (Character != null)
             Character.StandUp();
     }
@@ -98,7 +69,7 @@ public class Chair : MonoBehaviour
 
     private void ClearCharacter()
     {
-        if(Character != null)
+        if (Character != null)
         {
             Destroy(Character.gameObject);
 
