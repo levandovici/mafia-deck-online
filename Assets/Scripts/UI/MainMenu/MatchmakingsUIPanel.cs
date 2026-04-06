@@ -97,12 +97,14 @@ public class MatchmakingsUIPanel : UIPanel
 
             _informationPanel.Close();
         }
+        else
+        {
+            _current = current;
 
-        _current = current;
+            _players.text = $"Players: {current.current_players}/{current.max_players}";
 
-        _players.text = $"Players: {current.current_players}/{current.max_players}";
-
-        _informationPanel.Open();
+            _informationPanel.Open();
+        }
     }
 
 

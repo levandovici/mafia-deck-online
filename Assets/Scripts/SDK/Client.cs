@@ -58,18 +58,58 @@ public static class Client
         else return null;
     }
 
-    public static async Task CreateMatchmaking(string playerToken)
+    public static async Task<bool> CreateMatchmaking(string playerToken, int players = 6)
     {
-        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<RulesData>(playerToken, 6, true);
+        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<RulesData>(playerToken, players, true);
 
-        if(response.success)
+        return response.success;
+    }
+
+    public static async Task<bool> JoinMatchmaking(string playerToken, string matchmakingId)
+    {
+        MatchmakingDirectJoinResponse response = await Game.JoinMatchmakingDirectlyAsync(playerToken, matchmakingId);
+
+        return response.success;
+    }
+
+    public static async Task<MatchmakingInfo<RulesData>> CurrentMatchmaking(string playerToken)
+    {
+        MatchmakingCurrentResponse<RulesData> response = await Game.GetCurrentMatchmakingStatusAsync<RulesData>(playerToken);
+
+        if (response.success && response.in_matchmaking)
         {
-
+            return response.matchmaking;
         }
-        else
+        else return null;
+    }
+
+    public static async Task<List<MatchmakingPlayer>> MatchmakingPlayersList(string playerToken)
+    {
+        MatchmakingPlayersResponse response = await Game.GetMatchmakingPlayersAsync(playerToken);
+
+        if (response.success)
         {
-
+            return response.players;
         }
+        else return null;
+    }
+
+    public static async Task<bool> StartMatchmaking(string playerToken)
+    {
+        MatchmakingStartResponse response = await Game.StartGameFromMatchmakingAsync(playerToken);
+
+        return response.success;
+    }
+
+    public static async Task<RoomResponse> CurrentRoom(string playerToken)
+    {
+        CurrentRoomResponse response = await Game.GetCurrentRoomAsync(playerToken);
+
+        if (response.success)
+        {
+            return new RoomResponse(true, response.in_room ? response.room : null);
+        }
+        else return new RoomResponse(false);
     }
 }
 
@@ -114,6 +154,51 @@ public class AuthResponse
         Success = success;
 
         Player = player;
+    }
+}
+
+public class RoomResponse
+{
+    [SerializeField]
+    private bool _success;
+    [SerializeField]
+    private CurrentRoomInfo _room;
+
+
+
+    public bool Success
+    {
+        get
+        {
+            return _success;
+        }
+
+        private set
+        {
+            _success = value;
+        }
+    }
+
+    public CurrentRoomInfo Room
+    {
+        get
+        {
+            return _room;
+        }
+
+        private set
+        {
+            _room = value;
+        }
+    }
+
+
+
+    public RoomResponse(bool success, CurrentRoomInfo room = null)
+    {
+        Success = success;
+
+        Room = room;
     }
 }
 
