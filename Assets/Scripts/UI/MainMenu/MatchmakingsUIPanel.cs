@@ -20,7 +20,7 @@ public class MatchmakingsUIPanel : UIPanel
     [SerializeField]
     private UIPanel _informationPanel;
 
-    private MatchmakingLobby _current = null;
+    private MatchmakingLobby<RulesData> _current = null;
 
     [SerializeField]
     private TextMeshProUGUI _players;
@@ -36,7 +36,7 @@ public class MatchmakingsUIPanel : UIPanel
 
 
 
-    public event Action<MatchmakingLobby> OnJoin;
+    public event Action<MatchmakingLobby<RulesData>> OnJoin;
 
     public event Action OnBack;
 
@@ -60,13 +60,13 @@ public class MatchmakingsUIPanel : UIPanel
 
 
 
-    public void Setup(List<MatchmakingLobby> matchmakings)
+    public void Setup(List<MatchmakingLobby<RulesData>> matchmakings)
     {
         if (_informationPanel.Opened && _current != null)
         {
             bool contains = false;
 
-            foreach (MatchmakingLobby lobby in matchmakings)
+            foreach (MatchmakingLobby<RulesData> lobby in matchmakings)
             {
                 if (lobby.matchmaking_id == _current.matchmaking_id)
                 {
@@ -89,7 +89,7 @@ public class MatchmakingsUIPanel : UIPanel
 
 
 
-    private void Setup(MatchmakingLobby current)
+    private void Setup(MatchmakingLobby<RulesData> current)
     {
         if (_current != null && _current.matchmaking_id == current.matchmaking_id)
         {
@@ -109,7 +109,7 @@ public class MatchmakingsUIPanel : UIPanel
 
 
 
-    private void SetupButtons(List<MatchmakingLobby> matchmakings)
+    private void SetupButtons(List<MatchmakingLobby<RulesData>> matchmakings)
     {
         SetupButtons(matchmakings.Count);
 

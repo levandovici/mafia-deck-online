@@ -46,57 +46,55 @@ public class Chair : MonoBehaviour
 
     public void Setup(ChairData chair)
     {
-        ClearCharacter();
+        Release();
 
         CharacterData character = chair.character;
-        
-        string json = Resources.Load<TextAsset>("Characters/characters").text;
 
-        CharacterPrefabs characters = JsonUtility.FromJson<CharacterPrefabs>(json);
+        if (character != null)
+        {
+            string json = Resources.Load<TextAsset>("Characters/characters").text;
 
-        string path = characters.characters[character.custom.type].clothes[character.custom.clothes].colors[character.custom.color].path;
+            CharacterPrefabs characters = JsonUtility.FromJson<CharacterPrefabs>(json);
 
-        Character prefab = Resources.Load<Character>(path);
+            string path = characters.characters[character.custom.type].clothes[character.custom.clothes].colors[character.custom.color].path;
 
-        Character obj = Instantiate(prefab, _characterPivot, false);
+            Character prefab = Resources.Load<Character>(path);
 
-        obj.Setup(character);
+            Character obj = Instantiate(prefab, _characterPivot, false);
+
+            obj.Setup(character);
+
+            Character = obj;
+        }
 
         Data = chair;
-
-        Character = obj;
     }
 
 
 
     public void SitDown()
     {
+        if (Character == null)
+            return;
+
         _animator.SetTrigger("PushIn");
 
-        if (Character != null)
-            Character.SitDown();
+        Character.SitDown();
     }
 
     public void StandUp()
     {
+        if (Character == null)
+            return;
+
         _animator.SetTrigger("PullOut");
 
-        if (Character != null)
-            Character.StandUp();
+        Character.StandUp();
     }
 
 
 
     public void Release()
-    {
-        Destroy(Character.gameObject);
-
-        Character = null;
-    }
-
-
-
-    private void ClearCharacter()
     {
         if(Character != null)
         {

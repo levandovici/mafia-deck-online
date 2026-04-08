@@ -20,7 +20,7 @@ public class MatchmakingUIPanel : UIPanel
     [SerializeField]
     private UIPanel _informationPanel;
 
-    private MatchmakingPlayer _current = null;
+    private MatchmakingPlayer<PlayerData> _current = null;
 
     [SerializeField]
     private TextMeshProUGUI _players;
@@ -64,21 +64,21 @@ public class MatchmakingUIPanel : UIPanel
         matchmaking.is_host = isHost;
 
 
-        var player = new MatchmakingPlayer();
+        var player = new MatchmakingPlayer<PlayerData>();
 
         player.is_host = isHost;
 
 
-        Setup(matchmaking, new List<MatchmakingPlayer> { player });
+        Setup(matchmaking, new List<MatchmakingPlayer<PlayerData>> { player });
     }
 
-    public void Setup(MatchmakingInfo<RulesData> matcmaking, List<MatchmakingPlayer> players)
+    public void Setup(MatchmakingInfo<RulesData> matcmaking, List<MatchmakingPlayer<PlayerData>> players)
     {
         if (_informationPanel.Opened && _current != null)
         {
             bool contains = false;
 
-            foreach (MatchmakingPlayer player in players)
+            foreach (MatchmakingPlayer<PlayerData> player in players)
             {
                 if (player.player_id == _current.player_id)
                 {
@@ -107,7 +107,7 @@ public class MatchmakingUIPanel : UIPanel
 
 
 
-    private void Setup(MatchmakingPlayer current)
+    private void Setup(MatchmakingPlayer<PlayerData> current)
     {
         if (_current != null && _current.player_id == current.player_id)
         {
@@ -125,7 +125,7 @@ public class MatchmakingUIPanel : UIPanel
 
 
 
-    private void SetupButtons(List<MatchmakingPlayer> players)
+    private void SetupButtons(List<MatchmakingPlayer<PlayerData>> players)
     {
         SetupButtons(players.Count);
 

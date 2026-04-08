@@ -47,9 +47,9 @@ public static class Client
     }
 
 
-    public static async Task<List<MatchmakingLobby>> MatchmakingsList()
+    public static async Task<List<MatchmakingLobby<RulesData>>> MatchmakingsList()
     {
-        MatchmakingListResponse response = await Game.GetMatchmakingLobbiesAsync();
+        MatchmakingListResponse<RulesData> response = await Game.GetMatchmakingLobbiesAsync<RulesData>();
 
         if (response.success)
         {
@@ -58,16 +58,16 @@ public static class Client
         else return null;
     }
 
-    public static async Task<bool> CreateMatchmaking(string playerToken, int players = 6)
+    public static async Task<bool> CreateMatchmaking(string playerToken, string matchmakingName, PlayerData playerData, int players)
     {
-        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<RulesData>(playerToken, players, true);
+        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<PlayerData, RulesData>(playerToken, matchmakingName, players, true, false, false, playerData);
 
         return response.success;
     }
 
-    public static async Task<bool> JoinMatchmaking(string playerToken, string matchmakingId)
+    public static async Task<bool> JoinMatchmaking(string playerToken, string matchmakingId, PlayerData playerData)
     {
-        MatchmakingDirectJoinResponse response = await Game.JoinMatchmakingDirectlyAsync(playerToken, matchmakingId);
+        MatchmakingDirectJoinResponse response = await Game.JoinMatchmakingDirectlyAsync<PlayerData>(playerToken, matchmakingId, playerData);
 
         return response.success;
     }
@@ -76,16 +76,16 @@ public static class Client
     {
         MatchmakingCurrentResponse<RulesData> response = await Game.GetCurrentMatchmakingStatusAsync<RulesData>(playerToken);
 
-        if (response.success && response.in_matchmaking)
+        if (response.success)// && response.in_matchmaking)
         {
             return response.matchmaking;
         }
         else return null;
     }
 
-    public static async Task<List<MatchmakingPlayer>> MatchmakingPlayersList(string playerToken)
+    public static async Task<List<MatchmakingPlayer<PlayerData>>> MatchmakingPlayersList(string playerToken)
     {
-        MatchmakingPlayersResponse response = await Game.GetMatchmakingPlayersAsync(playerToken);
+        MatchmakingPlayersResponse<PlayerData> response = await Game.GetMatchmakingPlayersAsync<PlayerData>(playerToken);
 
         if (response.success)
         {
@@ -103,13 +103,24 @@ public static class Client
 
     public static async Task<RoomResponse> CurrentRoom(string playerToken)
     {
-        CurrentRoomResponse response = await Game.GetCurrentRoomAsync(playerToken);
+        CurrentRoomResponse<RulesData> response = await Game.GetCurrentRoomAsync<RulesData>(playerToken);
 
         if (response.success)
         {
             return new RoomResponse(true, response.in_room ? response.room : null);
         }
         else return new RoomResponse(false);
+    }
+
+    public static async Task<List<RoomPlayer<PlayerData>>> RoomPlayersList(string playerToken)
+    {
+        RoomPlayersResponse<PlayerData> response = await Game.GetRoomPlayersAsync<PlayerData>(playerToken);
+
+        if (response.success)
+        {
+            return response.players;
+        }
+        else return null;
     }
 }
 
@@ -162,7 +173,7 @@ public class RoomResponse
     [SerializeField]
     private bool _success;
     [SerializeField]
-    private CurrentRoomInfo _room;
+    private CurrentRoomInfo<RulesData> _room;
 
 
 
@@ -179,7 +190,7 @@ public class RoomResponse
         }
     }
 
-    public CurrentRoomInfo Room
+    public CurrentRoomInfo<RulesData> Room
     {
         get
         {
@@ -194,7 +205,7 @@ public class RoomResponse
 
 
 
-    public RoomResponse(bool success, CurrentRoomInfo room = null)
+    public RoomResponse(bool success, CurrentRoomInfo<RulesData> room = null)
     {
         Success = success;
 

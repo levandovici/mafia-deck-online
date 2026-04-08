@@ -14,7 +14,7 @@ public class ChairData
     {
         get
         {
-            return state != EChairState.None;
+            return state != EChairState.None && character != null;
         }
     }
 
@@ -25,7 +25,7 @@ public class ChairData
 
     }
 
-    public ChairData(EChairState state, CharacterData character)
+    public ChairData(EChairState state, CharacterData character = null)
     {
         this.state = state;
 

@@ -10,6 +10,46 @@ public class GameplaySceneManager : MonoBehaviour
 
 
 
+    private void Awake()
+    {
+        ChairData[] chairs = new ChairData[6];
+
+        string json = Resources.Load<TextAsset>("Characters/characters").text;
+
+        CharacterPrefabs characters = JsonUtility.FromJson<CharacterPrefabs>(json);
+
+        int typesCount = characters.characters.Count;
+
+        int clothesCount = characters.characters[0].clothes.Count;
+
+        int colorCount = characters.characters[0].clothes[0].colors.Count;
+
+
+        for (int i = 0; i < chairs.Length; i++)
+        {
+            if (i < SaveLoadManager.CurrentGame.RoomPlayers.Count && 
+                SaveLoadManager.CurrentGame.RoomPlayers[i].PlayerData != null &&
+                SaveLoadManager.CurrentGame.RoomPlayers[i].PlayerData.character != null)
+            {
+                CharacterData character = 
+                    new CharacterData(SaveLoadManager.CurrentGame.RoomPlayers[i].PlayerData.character);
+
+                chairs[i] = new ChairData(EChairState.PulledOut, character);
+            }
+            else
+            {
+                chairs[i] = new ChairData(EChairState.PulledOut, null);
+            }
+        }
+
+
+        _tableController.Setup(new TableData(ETableType.Players_6, chairs));
+
+        _tableController.Table.SitDownAll();
+    }
+
+
+
     [ContextMenu("Generate")]
     private void Generate()
     {

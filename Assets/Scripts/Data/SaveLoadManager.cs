@@ -12,6 +12,8 @@ public static class SaveLoadManager
 
     private static PlayerData _playerData = null;
 
+    private static CurrentGameData _currentGameData = null;
+
 
 
     public static int SceneIndex
@@ -50,6 +52,19 @@ public static class SaveLoadManager
         private set
         {
             _playerData = value;
+        }
+    }
+
+    public static CurrentGameData CurrentGame
+    {
+        get
+        {
+            return _currentGameData;
+        }
+
+        private set
+        {
+            _currentGameData = value;
         }
     }
 
@@ -103,5 +118,12 @@ public static class SaveLoadManager
     public static void UploadPlayer(PlayerData player)
     {
         Player = player;
+    }
+
+
+
+    public static void CreateGame(CurrentGameData currentGame)
+    {
+        CurrentGame = currentGame;
     }
 }

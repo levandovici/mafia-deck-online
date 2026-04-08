@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuSceneManager : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
         _uiManager.Matchmaking.OnBack += () => _uiManager.Setup(EMainMenuPanel.Matchmakings);
 
-        _uiManager.Matchmaking.OnStart += () => _ = OnStartMatchmaking();
+        _uiManager.Matchmaking.OnStart += () => _ = OnStartMatchmaking(true);
 
 
         _uiManager.Setup(EMainMenuPanel.MainMenu);
@@ -54,7 +55,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
 
 
-    private async Task OnJoinMatchmaking(MatchmakingLobby matchmaking)
+    private async Task OnJoinMatchmaking(MatchmakingLobby<RulesData> matchmaking)
     {
         _isJoiningMatchmaking = true;
 
@@ -64,7 +65,8 @@ public class MainMenuSceneManager : MonoBehaviour
 
         _uiManager.Matchmaking.Setup(false);
 
-        bool success = await Client.JoinMatchmaking(SaveLoadManager.User.PlayerToken, matchmaking.matchmaking_id);
+        bool success = await Client.JoinMatchmaking(SaveLoadManager.User.PlayerToken,
+            matchmaking.matchmaking_id, SaveLoadManager.Player);
 
         if(success)
         {
@@ -92,7 +94,8 @@ public class MainMenuSceneManager : MonoBehaviour
 
         _uiManager.Matchmaking.Setup(true);
 
-        bool success = await Client.CreateMatchmaking(SaveLoadManager.User.PlayerToken);
+        bool success = await Client.CreateMatchmaking(SaveLoadManager.User.PlayerToken,
+            "Matchmaking", SaveLoadManager.Player, 2);
 
         if(success)
         {
@@ -110,19 +113,19 @@ public class MainMenuSceneManager : MonoBehaviour
         _isCreatingMatchmaking = false;
     }
 
-    private async Task OnStartMatchmaking()
+    private async Task OnStartMatchmaking(bool isHost)
     {
         _isStartingMatchmaking = true;
 
         // Show staring matchmaking...
 
-        bool success = await Client.StartMatchmaking(SaveLoadManager.User.PlayerToken);
+        bool success = isHost ? await Client.StartMatchmaking(SaveLoadManager.User.PlayerToken) : true;
 
         if (success)
         {
             // Preload players data...
 
-            CurrentRoomInfo room = null;
+            CurrentRoomInfo<RulesData> room = null;
 
             do
             {
@@ -130,17 +133,28 @@ public class MainMenuSceneManager : MonoBehaviour
 
                 if (!roomResponse.Success)
                 {
-                    // Show Error Start Matchmaking (Current Room)
+                    // Show Error Current Room
 
                     _uiManager.Setup(EMainMenuPanel.Matchmakings);
+                }
+                else if(roomResponse.Room != null)
+                {
+                    room = roomResponse.Room;
                 }
             }
             while (room == null);
 
-            // Collect all players custom data and send to others
+            // Collect all players custom data
 
+            List<RoomPlayer<PlayerData>> players = await Client.RoomPlayersList(SaveLoadManager.User.PlayerToken);
+
+            SaveLoadManager.CreateGame(new CurrentGameData(room, players));
 
             // Load Gameplay Scene...
+
+            SaveLoadManager.SceneIndex = 2;
+
+            SceneManager.LoadScene(0);
         }
         else
         {
@@ -188,7 +202,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
     private IEnumerator MatchmakingsList()
     {
-        Task<List<MatchmakingLobby>> task = Client.MatchmakingsList();
+        Task<List<MatchmakingLobby<RulesData>>> task = Client.MatchmakingsList();
 
 
         yield return new WaitUntil(() => task.IsCompleted);
@@ -221,14 +235,14 @@ public class MainMenuSceneManager : MonoBehaviour
 
     private IEnumerator Matchmaking()
     {
-        yield return new WaitUntil(() => !_isCreatingMatchmaking && !_isJoiningMatchmaking);
+        yield return new WaitUntil(() => !_isCreatingMatchmaking && !_isJoiningMatchmaking && !_isStartingMatchmaking);
 
 
         Task<MatchmakingInfo<RulesData>> matchmakingTask = Client.CurrentMatchmaking(SaveLoadManager.User.PlayerToken);
 
         yield return new WaitUntil(() => matchmakingTask.IsCompleted);
 
-        Task<List<MatchmakingPlayer>> playersTask = Client.MatchmakingPlayersList(SaveLoadManager.User.PlayerToken);
+        Task<List<MatchmakingPlayer<PlayerData>>> playersTask = Client.MatchmakingPlayersList(SaveLoadManager.User.PlayerToken);
 
         yield return new WaitUntil(() => playersTask.IsCompleted);
 
@@ -248,6 +262,17 @@ public class MainMenuSceneManager : MonoBehaviour
         else
         {
             _uiManager.Matchmaking.Setup(matchmakingTask.Result, playersTask.Result);
+
+            if(matchmakingTask.Result.is_started)
+            {
+                _ = OnStartMatchmaking(false);
+
+                _matchmakingCoroutine = null;
+
+                // Show loading circle...
+
+                yield break;
+            }
         }
 
         if (_uiManager.Matchmaking.Opened)
