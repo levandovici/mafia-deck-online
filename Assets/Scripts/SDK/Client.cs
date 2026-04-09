@@ -60,7 +60,7 @@ public static class Client
 
     public static async Task<bool> CreateMatchmaking(string playerToken, string matchmakingName, PlayerData playerData, int players)
     {
-        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<PlayerData, RulesData>(playerToken, matchmakingName, players, true, false, false, playerData);
+        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<PlayerData, RulesData>(playerToken, matchmakingName, players, true, false, false, false, playerData);
 
         return response.success;
     }
