@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Chair : MonoBehaviour
 {
@@ -9,10 +10,16 @@ public class Chair : MonoBehaviour
     [SerializeField]
     private Transform _characterPivot;
 
+    [SerializeField]
+    private Transform _cameraPivot;
+
     private ChairData _chair;
 
     [SerializeField]
     private Character _character = null;
+
+    [SerializeField]
+    private CameraPoint _cameraPoint = null;
 
 
 
@@ -42,6 +49,14 @@ public class Chair : MonoBehaviour
         }
     }
 
+    public CameraPoint CameraPoint
+    {
+        get
+        {
+            return _cameraPoint;
+        }
+    }
+
 
 
     public void Setup(ChairData chair)
@@ -65,6 +80,12 @@ public class Chair : MonoBehaviour
             obj.Setup(character);
 
             Character = obj;
+
+            _cameraPoint = new CameraPoint(_cameraPivot, obj.transform);
+        }
+        else
+        {
+            _cameraPoint = new CameraPoint(_cameraPivot);
         }
 
         Data = chair;

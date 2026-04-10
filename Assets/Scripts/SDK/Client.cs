@@ -6,8 +6,8 @@ using System;
 
 public static class Client
 {
-    private static GameSDK _client = new GameSDK("5280c806cfcba3d7ab823663f5b490ac4b29",
-        "7e41fd31b472d84a2795442ece78270324f7", logger: new ConsoleLogger());
+    private static GameSDK _client = new GameSDK("b62a1e88dc19335d5f85d3d46d25bfaa5575",
+        "faf74d7a8052ab930b4a26d47de43401407d", logger: new ConsoleLogger());
 
 
 

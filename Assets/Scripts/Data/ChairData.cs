@@ -6,6 +6,8 @@ public class ChairData
 {
     public EChairState state;
 
+    public bool localPlayer;
+
     public CharacterData character;
 
 
@@ -20,14 +22,16 @@ public class ChairData
 
 
 
-    public ChairData() : this(EChairState.PulledOut, new CharacterData())
+    public ChairData(bool playerChair) : this(EChairState.PulledOut, playerChair, new CharacterData())
     {
 
     }
 
-    public ChairData(EChairState state, CharacterData character = null)
+    public ChairData(EChairState state, bool localPlayer, CharacterData character = null)
     {
         this.state = state;
+
+        this.localPlayer = localPlayer;
 
         this.character = character;
     }

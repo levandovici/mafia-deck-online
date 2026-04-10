@@ -8,6 +8,8 @@ public class TableData
 
     public ChairData[] chairs;
 
+    public int localPlayer;
+
 
 
     public bool IsValid
@@ -36,16 +38,18 @@ public class TableData
 
 
 
-    public TableData() : this(ETableType.Players_6, new ChairData[6])
+    public TableData(int localPlayer) : this(ETableType.Players_6, new ChairData[6], localPlayer)
     {
 
     }
 
-    public TableData(ETableType type, ChairData[] chairs)
+    public TableData(ETableType type, ChairData[] chairs, int localPlayer)
     {
         this.type = type;
 
         this.chairs = chairs;
+
+        this.localPlayer = localPlayer;
     }
 }
 

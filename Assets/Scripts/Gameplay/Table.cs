@@ -9,6 +9,21 @@ public class Table : MonoBehaviour
 
 
 
+    public CameraPoint[] CameraPoints
+    {
+        get
+        {
+            CameraPoint[] points = new CameraPoint[_chairs.Length];
+
+            for(int i = 0; i < _chairs.Length; i++)
+            {
+                points[i] = _chairs[i].CameraPoint;
+            }
+
+            return points;
+        }
+    }
+
     public TableData Data
     {
         get
