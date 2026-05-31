@@ -70,14 +70,14 @@ public static class SaveLoadManager
 
 
 
-    public static void SaveUser()
+    public static void SaveUser(int userIndex = -1)
     {
         if (User == null)
             return;
 
         string json = JsonUtility.ToJson(User);
 
-        PlayerPrefs.SetString(_userDataKey, json);
+        PlayerPrefs.SetString(UserKey(userIndex), json);
 
         PlayerPrefs.Save();
     }
@@ -86,14 +86,16 @@ public static class SaveLoadManager
     /// returns true if loaded, returns false if not loaded
     /// </summary>
     /// <returns></returns>
-    public static bool LoadUser()
+    public static bool LoadUser(int userIndex = -1)
     {
-        if (!PlayerPrefs.HasKey(_userDataKey))
+        User = null;
+
+        if (!PlayerPrefs.HasKey(UserKey(userIndex)))
             return false;
 
         try
         {
-            string json = PlayerPrefs.GetString(_userDataKey);
+            string json = PlayerPrefs.GetString(UserKey(userIndex));
 
             UserData user = JsonUtility.FromJson<UserData>(json);
 
@@ -107,11 +109,11 @@ public static class SaveLoadManager
         }
     }
 
-    public static void CreateUser(UserData user)
+    public static void CreateUser(UserData user, int userIndex = -1)
     {
         User = user;
 
-        SaveUser();
+        SaveUser(userIndex);
     }
 
 
@@ -125,5 +127,12 @@ public static class SaveLoadManager
     public static void CreateGame(CurrentGameData currentGame)
     {
         CurrentGame = currentGame;
+    }
+
+
+
+    private static string UserKey(int userIndex = -1)
+    {
+        return userIndex == -1 ? _userDataKey : $"{_userDataKey}{userIndex}";
     }
 }

@@ -1,9 +1,9 @@
-using michitai;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using michitai;
 
 public class MainMenuSceneManager : MonoBehaviour
 {
@@ -22,6 +22,9 @@ public class MainMenuSceneManager : MonoBehaviour
     private bool _isJoiningMatchmaking = false;
 
     private bool _isStartingMatchmaking = false;
+
+    [SerializeField]
+    private int _userIndex = -1;
 
 
 
@@ -284,6 +287,37 @@ public class MainMenuSceneManager : MonoBehaviour
         else
         {
             _matchmakingCoroutine = null;
+        }
+    }
+
+
+
+    [ContextMenu("SwitchUser")]
+    private async Task SwitchUser()
+    {
+        if (!SaveLoadManager.LoadUser(_userIndex) || !SaveLoadManager.User.IsValid)
+        {
+            string playerToken = await Client.Register();
+
+            if (playerToken == null)
+            {
+                //Show Register Error
+            }
+            else
+            {
+                SaveLoadManager.CreateUser(new UserData(playerToken));
+            }
+        }
+
+        AuthResponse auth = await Client.Auth(SaveLoadManager.User.PlayerToken);
+
+        if (auth.Success)
+        {
+            SaveLoadManager.UploadPlayer(auth.Player);
+        }
+        else
+        {
+            //Show Auth Error
         }
     }
 }
