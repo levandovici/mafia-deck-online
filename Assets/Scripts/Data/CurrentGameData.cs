@@ -1,4 +1,8 @@
-using michitai;
+using Michitai;
+using Michitai.Multiplayer;
+using Michitai.Multiplayer.Rooms;
+using Michitai.Multiplayer.Rooms.Actions;
+using Michitai.Multiplayer.Rooms.Updates;
 using System.Collections.Generic;
 using UnityEngine;
 

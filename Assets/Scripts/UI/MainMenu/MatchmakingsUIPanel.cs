@@ -2,7 +2,9 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using michitai;
+using Michitai;
+using Michitai.Multiplayer;
+using Michitai.Multiplayer.Matchmaking;
 using System.Collections.Generic;
 
 public class MatchmakingsUIPanel : UIPanel

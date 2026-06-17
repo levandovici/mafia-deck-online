@@ -1,220 +1,119 @@
-using UnityEngine;
-using michitai;
-using System.Threading.Tasks;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using UnityEngine;
+using Michitai.Multiplayer.Errors;
 
-public static class Client
+namespace Michitai.Multiplayer
 {
-    private static GameSDK _client = new GameSDK("b62a1e88dc19335d5f85d3d46d25bfaa5575",
-        "faf74d7a8052ab930b4a26d47de43401407d", logger: new ConsoleLogger());
-
-
-
-    public static GameSDK Game
+    /// <summary>
+    /// Main HTTP client for communicating with the Michitai Multiplayer API in Unity.
+    /// Handles authentication, serialization with JsonUtility, and HTTP requests with comprehensive error handling.
+    /// Supports Unity-specific JSON formatting for compatibility with Unity's serialization system.
+    /// </summary>
+    public class Client
     {
-        get
+        private readonly string _apiToken;
+        private readonly string _apiPrivateToken;
+        private readonly string _baseUrl;
+        private readonly HttpClient _http;
+        private readonly Errors.ILogger _logger;
+        private readonly bool _useUnityFormat;
+
+        /// <summary>
+        /// Initializes a new instance of the Client class for Unity.
+        /// </summary>
+        /// <param name="apiToken">Public API token for game identification.</param>
+        /// <param name="apiPrivateToken">Private API token for admin operations.</param>
+        /// <param name="baseUrl">Base URL for the API (default: https://api.michitai.com/api).</param>
+        /// <param name="logger">Optional logger for debugging and error tracking (default: ConsoleLogger).</param>
+        /// <param name="httpClient">Optional custom HTTP client (default: new client with 30s timeout).</param>
+        /// <param name="useUnityFormat">Whether to use Unity-specific JSON formatting (default: true).</param>
+        /// <exception cref="ArgumentNullException">Thrown when apiToken or apiPrivateToken is null.</exception>
+        public Client(string apiToken, string apiPrivateToken, string baseUrl = "https://api.michitai.com/api",
+                       Errors.ILogger logger = null, HttpClient httpClient = null, bool useUnityFormat = true)
         {
-            return _client;
-        }
-    }
-
-
-
-    public static async Task<string> Register()
-    {
-        PlayerRegisterResponse response = await Game.RegisterPlayer("Player", new PlayerData());
-
-        if (response.success)
-        {
-            return response.private_key;
-        }
-
-        return null;
-    }
-
-    public static async Task<AuthResponse> Auth(string playerToken)
-    {
-        PlayerAuthResponse<PlayerData> response = await Game.AuthenticatePlayer<PlayerData>(playerToken);
-
-        if (response.success)
-        {
-            PlayerData player = response.player.PlayerData;
-
-            return new AuthResponse(response.success, player ?? new PlayerData());
-        }
-        else return new AuthResponse(false);
-    }
-
-
-    public static async Task<List<MatchmakingLobby<RulesData>>> MatchmakingsList()
-    {
-        MatchmakingListResponse<RulesData> response = await Game.GetMatchmakingLobbiesAsync<RulesData>();
-
-        if (response.success)
-        {
-            return response.lobbies;
-        }
-        else return null;
-    }
-
-    public static async Task<bool> CreateMatchmaking(string playerToken, string matchmakingName, PlayerData playerData, int players)
-    {
-        MatchmakingCreateResponse response = await Game.CreateMatchmakingLobbyAsync<PlayerData, RulesData>(playerToken, matchmakingName, players, true, false, false, false, playerData);
-
-        return response.success;
-    }
-
-    public static async Task<bool> JoinMatchmaking(string playerToken, string matchmakingId, PlayerData playerData)
-    {
-        MatchmakingDirectJoinResponse response = await Game.JoinMatchmakingDirectlyAsync<PlayerData>(playerToken, matchmakingId, playerData);
-
-        return response.success;
-    }
-
-    public static async Task<MatchmakingInfo<RulesData>> CurrentMatchmaking(string playerToken)
-    {
-        MatchmakingCurrentResponse<RulesData> response = await Game.GetCurrentMatchmakingStatusAsync<RulesData>(playerToken);
-
-        if (response.success)// && response.in_matchmaking)
-        {
-            return response.matchmaking;
-        }
-        else return null;
-    }
-
-    public static async Task<List<MatchmakingPlayer<PlayerData>>> MatchmakingPlayersList(string playerToken)
-    {
-        MatchmakingPlayersResponse<PlayerData> response = await Game.GetMatchmakingPlayersAsync<PlayerData>(playerToken);
-
-        if (response.success)
-        {
-            return response.players;
-        }
-        else return null;
-    }
-
-    public static async Task<bool> StartMatchmaking(string playerToken)
-    {
-        MatchmakingStartResponse response = await Game.StartGameFromMatchmakingAsync(playerToken);
-
-        return response.success;
-    }
-
-    public static async Task<RoomResponse> CurrentRoom(string playerToken)
-    {
-        CurrentRoomResponse<RulesData> response = await Game.GetCurrentRoomAsync<RulesData>(playerToken);
-
-        if (response.success)
-        {
-            return new RoomResponse(true, response.in_room ? response.room : null);
-        }
-        else return new RoomResponse(false);
-    }
-
-    public static async Task<List<RoomPlayer<PlayerData>>> RoomPlayersList(string playerToken)
-    {
-        RoomPlayersResponse<PlayerData> response = await Game.GetRoomPlayersAsync<PlayerData>(playerToken);
-
-        if (response.success)
-        {
-            return response.players;
-        }
-        else return null;
-    }
-}
-
-public class AuthResponse
-{
-    [SerializeField]
-    private bool _success;
-    [SerializeField]
-    private PlayerData _player;
-
-
-    public bool Success
-    {
-        get
-        {
-            return _success;
+            _apiToken = apiToken ?? throw new ArgumentNullException(nameof(apiToken));
+            _apiPrivateToken = apiPrivateToken ?? throw new ArgumentNullException(nameof(apiPrivateToken));
+            _baseUrl = baseUrl.EndsWith("/") ? baseUrl : baseUrl + "/";
+            _logger = logger ?? new ConsoleLogger();
+            _http = httpClient ?? new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
+            _useUnityFormat = useUnityFormat;
         }
 
-        private set
+        /// <summary>
+        /// Generates a URL for public API endpoints with Unity format support.
+        /// </summary>
+        /// <param name="endpoint">The API endpoint path.</param>
+        /// <param name="extra">Additional query parameters.</param>
+        /// <returns>Complete URL with API token and format parameter.</returns>
+        internal string Url(string endpoint, string extra = "")
         {
-            _success = value;
+            string format = _useUnityFormat ? "unity" : "json";
+            return $"{_baseUrl}{endpoint}?api_token={_apiToken}&format={format}{extra}";
+        }
+
+        /// <summary>
+        /// Generates a URL for private API endpoints requiring admin access with Unity format support.
+        /// </summary>
+        /// <param name="endpoint">The API endpoint path.</param>
+        /// <param name="extra">Additional query parameters.</param>
+        /// <returns>Complete URL with API token, private token, and format parameter.</returns>
+        internal string PrivateUrl(string endpoint, string extra = "")
+        {
+            string format = _useUnityFormat ? "unity" : "json";
+            return $"{_baseUrl}{endpoint}?api_token={_apiToken}&private_token={_apiPrivateToken}&format={format}{extra}";
+        }
+
+        /// <summary>
+        /// Sends an HTTP request to the API and deserializes the response using JsonUtility.
+        /// </summary>
+        /// <typeparam name="T">The response type, must inherit from ApiResponse.</typeparam>
+        /// <param name="method">The HTTP method (GET, POST, PUT, DELETE).</param>
+        /// <param name="url">The complete URL to send the request to.</param>
+        /// <param name="body">Optional request body to serialize as JSON.</param>
+        /// <param name="ct">Cancellation token for async operation.</param>
+        /// <returns>Deserialized API response of type T.</returns>
+        internal async Task<T> Send<T>(HttpMethod method, string url, object body = null, CancellationToken ct = default) where T : ApiResponse, new()
+        {
+            var req = new HttpRequestMessage(method, url);
+
+            if (body != null)
+            {
+                string jsonBody = JsonUtility.ToJson(body);
+                req.Content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
+            }
+
+            var res = await _http.SendAsync(req, ct);
+            string responseText = await res.Content.ReadAsStringAsync();
+
+            _logger.Log($"API Response: {responseText}");
+
+            try
+            {
+                var response = JsonUtility.FromJson<T>(responseText) ?? new T();
+
+                if (!response.success)
+                {
+                    _logger.Error($"API Error: {response.error ?? "Unknown error"}");
+                    // Don't throw exception - let caller handle the typed error
+                }
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                _logger.Warn($"JSON Deserialization Error. Raw: {responseText}. Exception: {ex.Message}");
+
+                // Return a default error response instead of throwing
+                var errorResponse = new T();
+                errorResponse.success = false;
+                errorResponse.error = "Failed to deserialize response";
+                return errorResponse;
+            }
         }
     }
-
-    public PlayerData Player
-    {
-        get
-        {
-            return _player;
-        }
-
-        private set
-        {
-            _player = value;
-        }
-    }
-
-
-
-    public AuthResponse(bool success, PlayerData player = null)
-    {
-        Success = success;
-
-        Player = player;
-    }
-}
-
-public class RoomResponse
-{
-    [SerializeField]
-    private bool _success;
-    [SerializeField]
-    private CurrentRoomInfo<RulesData> _room;
-
-
-
-    public bool Success
-    {
-        get
-        {
-            return _success;
-        }
-
-        private set
-        {
-            _success = value;
-        }
-    }
-
-    public CurrentRoomInfo<RulesData> Room
-    {
-        get
-        {
-            return _room;
-        }
-
-        private set
-        {
-            _room = value;
-        }
-    }
-
-
-
-    public RoomResponse(bool success, CurrentRoomInfo<RulesData> room = null)
-    {
-        Success = success;
-
-        Room = room;
-    }
-}
-
-[Serializable]
-public class RulesData
-{
-
 }

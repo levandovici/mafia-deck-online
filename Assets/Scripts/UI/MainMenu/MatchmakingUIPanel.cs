@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using michitai;
+using Michitai;
+using Michitai.Multiplayer.Matchmaking;
 
 public class MatchmakingUIPanel : UIPanel
 {

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using michitai;
+using Michitai;
 using System;
 using System.Threading.Tasks;
 using UnityEngine.PlayerLoop;
@@ -26,7 +26,7 @@ public class LoadingSceneManager : MonoBehaviour
     {
         if(!SaveLoadManager.LoadUser() || !SaveLoadManager.User.IsValid)
         {
-           string playerToken = await Client.Register();
+           string playerToken = await MultiplayerClient.Register();
 
             if(playerToken == null)
             {
@@ -38,7 +38,7 @@ public class LoadingSceneManager : MonoBehaviour
             }
         }
 
-        AuthResponse auth = await Client.Auth(SaveLoadManager.User.PlayerToken);
+        AuthResponse auth = await MultiplayerClient.Auth(SaveLoadManager.User.PlayerToken);
 
         if(auth.Success)
         {

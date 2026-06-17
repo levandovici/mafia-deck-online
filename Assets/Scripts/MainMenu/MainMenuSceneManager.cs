@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using michitai;
+using Michitai;
+using Michitai.Multiplayer.Matchmaking;
+using Michitai.Multiplayer.Matchmaking.Requests;
+using Michitai.Multiplayer.Rooms;
 
 public class MainMenuSceneManager : MonoBehaviour
 {
@@ -68,7 +71,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
         _uiManager.Matchmaking.Setup(false);
 
-        bool success = await Client.JoinMatchmaking(SaveLoadManager.User.PlayerToken,
+        bool success = await MultiplayerClient.JoinMatchmaking(SaveLoadManager.User.PlayerToken,
             matchmaking.matchmaking_id, SaveLoadManager.Player);
 
         if(success)
@@ -97,7 +100,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
         _uiManager.Matchmaking.Setup(true);
 
-        bool success = await Client.CreateMatchmaking(SaveLoadManager.User.PlayerToken,
+        bool success = await MultiplayerClient.CreateMatchmaking(SaveLoadManager.User.PlayerToken,
             "Matchmaking", SaveLoadManager.Player, 2);
 
         if(success)
@@ -122,7 +125,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
         // Show staring matchmaking...
 
-        bool success = isHost ? await Client.StartMatchmaking(SaveLoadManager.User.PlayerToken) : true;
+        bool success = isHost ? await MultiplayerClient.StartMatchmaking(SaveLoadManager.User.PlayerToken) : true;
 
         if (success)
         {
@@ -132,7 +135,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
             do
             {
-                RoomResponse roomResponse = await Client.CurrentRoom(SaveLoadManager.User.PlayerToken);
+                RoomResponse roomResponse = await MultiplayerClient.CurrentRoom(SaveLoadManager.User.PlayerToken);
 
                 if (!roomResponse.Success)
                 {
@@ -149,7 +152,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
             // Collect all players custom data
 
-            List<RoomPlayer<PlayerData>> players = await Client.RoomPlayersList(SaveLoadManager.User.PlayerToken);
+            List<RoomPlayer<PlayerData>> players = await MultiplayerClient.RoomPlayersList(SaveLoadManager.User.PlayerToken);
 
             SaveLoadManager.CreateGame(new CurrentGameData(room, players));
 
@@ -205,7 +208,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
     private IEnumerator MatchmakingsList()
     {
-        Task<List<MatchmakingLobby<RulesData>>> task = Client.MatchmakingsList();
+        Task<List<MatchmakingLobby<RulesData>>> task = MultiplayerClient.MatchmakingsList();
 
 
         yield return new WaitUntil(() => task.IsCompleted);
@@ -241,11 +244,11 @@ public class MainMenuSceneManager : MonoBehaviour
         yield return new WaitUntil(() => !_isCreatingMatchmaking && !_isJoiningMatchmaking && !_isStartingMatchmaking);
 
 
-        Task<MatchmakingInfo<RulesData>> matchmakingTask = Client.CurrentMatchmaking(SaveLoadManager.User.PlayerToken);
+        Task<MatchmakingInfo<RulesData>> matchmakingTask = MultiplayerClient.CurrentMatchmaking(SaveLoadManager.User.PlayerToken);
 
         yield return new WaitUntil(() => matchmakingTask.IsCompleted);
 
-        Task<List<MatchmakingPlayer<PlayerData>>> playersTask = Client.MatchmakingPlayersList(SaveLoadManager.User.PlayerToken);
+        Task<List<MatchmakingPlayer<PlayerData>>> playersTask = MultiplayerClient.MatchmakingPlayersList(SaveLoadManager.User.PlayerToken);
 
         yield return new WaitUntil(() => playersTask.IsCompleted);
 
@@ -297,7 +300,7 @@ public class MainMenuSceneManager : MonoBehaviour
     {
         if (!SaveLoadManager.LoadUser(_userIndex) || !SaveLoadManager.User.IsValid)
         {
-            string playerToken = await Client.Register();
+            string playerToken = await MultiplayerClient.Register();
 
             if (playerToken == null)
             {
@@ -309,7 +312,7 @@ public class MainMenuSceneManager : MonoBehaviour
             }
         }
 
-        AuthResponse auth = await Client.Auth(SaveLoadManager.User.PlayerToken);
+        AuthResponse auth = await MultiplayerClient.Auth(SaveLoadManager.User.PlayerToken);
 
         if (auth.Success)
         {

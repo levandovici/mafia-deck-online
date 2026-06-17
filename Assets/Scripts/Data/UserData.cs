@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using michitai;
+using Michitai;
 
 [Serializable]
 public class UserData
