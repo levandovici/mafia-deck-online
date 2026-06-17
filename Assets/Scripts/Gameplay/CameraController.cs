@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -49,6 +50,7 @@ public class CameraController : MonoBehaviour
     }
 }
 
+[Serializable]
 public class CameraPoint
 {
     public Transform point;
