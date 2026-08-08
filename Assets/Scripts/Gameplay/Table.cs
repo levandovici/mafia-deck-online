@@ -9,6 +9,15 @@ public class Table : MonoBehaviour
 
 
 
+    public Chair[] Chairs => _chairs;
+
+    public Chair GetChair(int index)
+    {
+        if (_chairs != null && index >= 0 && index < _chairs.Length)
+            return _chairs[index];
+        return null;
+    }
+
     public CameraPoint[] CameraPoints
     {
         get

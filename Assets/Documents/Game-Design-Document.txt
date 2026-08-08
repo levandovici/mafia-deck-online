@@ -1,0 +1,443 @@
+Game Design Document: Casual 3D Mafia
+1. Overview
+Genre: Casual 3D Social Deduction
+Platform: Mobile (iOS/Android)
+Target Audience: 12+, casual players (quick sessions)
+Match Duration: 8-12 minutes
+Players: 6-12 (online multiplayer, auto-matchmaking)
+Core Loop: Day (discussion + vote) → Night (actions) → Repeat
+Win Conditions:
+◦ Mafia: Eliminate enough civilians (majority dead)
+◦ Civilians: Eliminate all Mafia
+Key Features: No chat, card-based discussion, auto-host, AFK auto-actions, 3D room
+
+2. Roles & Distribution (Auto-assigned)
+Players
+
+Mafia
+
+Doctor
+
+Commissioner
+
+Civilians
+
+6
+
+2
+
+1
+
+0
+
+3
+
+8
+
+3
+
+1
+
+1
+
+3
+
+10
+
+3
+
+1
+
+1
+
+5
+
+12
+
+4
+
+1
+
+1
+
+6
+
+Mafia
+
+Doctor
+
+Kill 1 civilian/night (random if AFK)
+
+Save 1 player/night (random if AFK, self-OK)
+
+Commissioner
+
+Civilian
+
+Check 1 player's role/night (random if AFK, result private via
+popup)
+
+No night action
+
+Role reveal: Only on death (popup for all)
+
+3. Gameplay Loop
+01
+
+02
+
+03
+
+Lobby (30s)
+
+Day Phase (6-8 min total)
+
+Execution
+
+Auto-match, avatar select
+
+Discussion (60s per player):
+
+Highest votes eliminated (reveal role). If
+tie/none, no death
+
+•
+•
+•
+
+Sequential spotlight on candidate (all
+see name/highlight)
+Players play 3-5 cards max (5-7s
+cooldown)
+Cards appear as speech bubbles near
+avatar
+
+Voting (20s): Tap vote button (drag to
+target). AFK=random. Tie=no elimination
+04
+
+05
+
+Night Phase (20-25s)
+
+Repeat
+
+Screen darkens, roles act sequentially (private popups)
+
+Until win
+
+AFK Handling
+
+Pacing
+
+Auto-random action/vote, warn after 1 min, kick after 2
+
+Auto-advance timers, no pauses
+
+4. Card System
+Limits: 3-5 per discussion round, 5-7s cooldown
+Mechanics: Purely social/psychological (no mechanical effect). Visual: Bubble + animation + sound
+Deck: Infinite shuffle from pools below (20 per type)
+
+Accusation Cards (🔴 - Aggressive, red tint)
+#
+
+Text
+
+1
+
+Подозрительно
+
+2
+
+Я голосую против
+
+3
+
+Ты мафия
+
+4
+
+Он врёт
+
+5
+
+Слишком тихий
+
+6
+
+Не доверяю
+
+7
+
+Лжёт в глаза
+
+8
+
+Мафиози
+
+9
+
+Убийца
+
+10
+
+Под килл
+
+11
+
+Виноват
+
+12
+
+Секретный план
+
+13
+
+Не верю
+
+14
+
+Ловкий мафия
+
+15
+
+Глаза выдают
+
+16
+
+Обманщик
+
+17
+
+Вычеркнуть
+
+18
+
+Твой конец
+
+19
+
+Предатель
+
+20
+
+Убить сейчас
+
+Defense Cards (🟢 - Defensive, green tint)
+#
+
+Text
+
+1
+
+Я мирный
+
+2
+
+Это ошибка
+
+3
+
+Подумайте ещё
+
+4
+
+Не я
+
+5
+
+Виноваты другие
+
+6
+
+Я за мирных
+
+7
+
+Докажу невиновен
+
+8
+
+Ложное обвинение
+
+9
+
+Спасите меня
+
+10
+
+Чистый
+
+11
+
+Не трогайте
+
+12
+
+Я на вашей стороне
+
+13
+
+Ошибка
+
+14
+
+Мирный житель
+
+15
+
+Верю вам
+
+16
+
+Давайте вместе
+
+17
+
+Невиновен
+
+18
+
+Поддержите
+
+19
+
+Я хороший
+
+20
+
+Не мафия
+
+Analysis Cards (🟡 - Neutral, yellow tint)
+#
+
+Text
+
+1
+
+Он молчал
+
+2
+
+Слишком активен
+
+3
+
+Меняет мнение
+
+4
+
+Странный голос
+
+5
+
+Смотрит в сторону
+
+6
+
+Повторяет других
+
+7
+
+Слишком уверен
+
+8
+
+Нервничает
+
+9
+
+Игнорирует вопросы
+
+10
+
+Подозрительный тайминг
+
+11
+
+Слабая защита
+
+12
+
+Активен ночью?
+
+13
+
+Логика хромает
+
+14
+
+Скрывает роль
+
+15
+
+Группируется
+
+16
+
+Ранний голос
+
+17
+
+Избегает глаз
+
+18
+
+Контраргументы
+
+19
+
+Пассивен
+
+20
+
+Несостыковки
+
+5. UI/UX
+Bottom Bar
+
+Center
+
+4-6 card slots (swipe to cycle), Vote button (lights up),
+
+Spotlighted candidate (large avatar + name)
+
+Timer
+
+Top Bar
+
+Popups
+
+Alive players grid (6-12 icons, dead grayed), Mafia
+
+Role assign, night actions/results, win screen
+
+count hidden
+
+Controls
+
+Accessibility
+
+Tap card to play, drag vote, pinch zoom
+
+Color-blind modes, large text, vibration feedback
+
+6. Audio/Visual Polish
+Music
+
+SFX
+
+Particles
+
+Dynamic (upbeat day, tense night,
+
+Card play (whoosh), vote (ding),
+
+Vote tally glow, death smoke
+
+victory fanfare)
+
+night (heartbeat)
+
+

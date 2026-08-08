@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +46,11 @@ namespace Michitai.Multiplayer.Rooms
         /// Whether the player is currently online.
         /// </summary>
         public bool is_online;
+
+        public void SetPlayerData(T data)
+        {
+            player_data_json = JsonUtility.ToJson(data);
+        }
 
         /// <summary>
         /// The player's custom data deserialized into the specified type.

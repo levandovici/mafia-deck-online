@@ -7,6 +7,7 @@ using Michitai.Multiplayer.Matchmaking.Requests;
 using Michitai.Multiplayer.Rooms;
 using Michitai.Multiplayer.Rooms.Actions;
 using Michitai.Multiplayer.Rooms.Updates;
+using Michitai.Multiplayer.Rooms.Realtime;
 using Michitai.Multiplayer.Errors;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -130,6 +131,43 @@ public static class MultiplayerClient
             return response.players;
         }
         else return null;
+    }
+
+    public static async Task<bool> SendRoomUpdate<T>(string playerToken, string type, T data, ERoomTargetPlayers target = ERoomTargetPlayers.All, int[] targetIds = null) where T : class, new()
+    {
+        UpdatePlayersResponse response = await Updates.UpdatePlayersAsync(Client, playerToken, new UpdatePlayers<T>(target, type, data, targetIds));
+        return response != null && response.success;
+    }
+
+    public static async Task<List<PlayerUpdate>> PollRoomUpdates(string playerToken, ERoomTargetPlayers fromPlayers = ERoomTargetPlayers.All, string lastUpdateId = null)
+    {
+        PollUpdatesResponse response = await Updates.PollUpdatesAsync(Client, playerToken, new PollUpdates(fromPlayers, null, lastUpdateId));
+        if (response != null && response.success)
+        {
+            return response.updates;
+        }
+        return null;
+    }
+
+    public static async Task<bool> SubmitRoomAction<T>(string playerToken, string actionType, T data, ERoomTargetPlayers target = ERoomTargetPlayers.Host, int[] targetIds = null) where T : class, new()
+    {
+        ActionSubmitResponse response = await Actions.SubmitActionAsync(Client, playerToken, new SubmitAction<T>(target, actionType, data, targetIds));
+        return response != null && response.success;
+    }
+
+    public static async Task<List<ActionInfo>> PollRoomActions(string playerToken)
+    {
+        ActionPollResponse response = await Actions.PollActionsAsync(Client, playerToken);
+        if (response != null && response.success)
+        {
+            return response.actions;
+        }
+        return null;
+    }
+
+    public static async Task<TokenResponse> GetRealtimeToken(string playerToken)
+    {
+        return await Realtime.GetTokenAsync(Client, playerToken);
     }
 }
 
